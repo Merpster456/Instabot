@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from time import sleep
+import getpass
 
 class Insta_bot:
 
@@ -99,7 +100,11 @@ class Insta_bot:
         sleep(2)
         driver.find_element_by_xpath("//button[contains(text(), 'Unfollow')]").click()
 
-bot = Insta_bot("quirk_hockey6", "poppk456")
+""" Initializes Bot """
+usr = input("Username: ")
+pwd = getpass.getpass()
+
+bot = Insta_bot(usr, pwd)
 bot.login()
 bot.unfollow()
 
