@@ -100,10 +100,11 @@ class Insta_bot:
         sleep(2)
         driver.find_element_by_xpath("//button[contains(text(), 'Unfollow')]").click()
 
-""" Initializes Bot """
+""" Asks for login credentials """
 usr = input("Username: ")
 pwd = getpass.getpass()
 
+""" Initializes bot """
 bot = Insta_bot(usr, pwd)
 bot.login()
 bot.unfollow()
