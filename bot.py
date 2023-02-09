@@ -66,10 +66,10 @@ class Insta_bot:
         print(following)
         print(followers)
         not_following_back = [user for user in following if user not in followers]
-        whitelist = ["nhl", "fullsend", "hockeybenders", "privacyinternational", "upstatenymemes", "shopfullsend", "avaroe",
+        whitelist = ["nhl", "fullsend", "hockeybenders", "privacyinternational", "upstatenymemes", "shopfullsend", 
                      "influencragency", "nelkboys", "usphlhockey","torproject","lakegeorgecamp","iihfhockey","nhlbruins",
                      "usahockeyntdp", "bardown", "spittinchiclets","pavelbarbertraining","heybarber","odrheaven","iihfworldjuniors",
-                     "bauer.sticks","usahockey","hockeyplayersclub", "on.the.bench","alek__17__04", "ave.valderrana"]
+                     "bauer.sticks","usahockey","hockeyplayersclub", "on.the.bench"]
         not_following_back2 = [user for user in not_following_back if user not in whitelist]
         for user in not_following_back2:
             self._unfollow(user)
